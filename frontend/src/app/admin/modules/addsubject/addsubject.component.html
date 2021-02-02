@@ -1,0 +1,37 @@
+
+  
+<br><br><br><br>
+ 
+<div class="bg-img">
+  <h1 style="margin-left: 100px;" >Add Subject</h1>
+
+  <div class="content">        
+    <form #myFrom ="ngForm" (ngSubmit)="addSubjects(myFrom.form.value)"> 
+       <table style="width: 100%;">
+           <tr>
+               <td style="padding-top: 60px; font-weight: bold;">
+                <b>Subject Name</b>
+               </td>
+               <td>
+                <div style="padding-top: 60px;" class="form-group">
+                    <input type="text" class="form-control" name="subName" [(ngModel)]="subName" placeholder="subject to be added">
+                  </div>           
+               </td>
+           </tr>
+           <tr>
+             <td><a routerLink="/admin/modules/managesubjects">Back to Manage Subjects</a></td>
+               <td  style="text-align: center;">
+                <button type="submit" style="font-weight: bold; ma" class="btn btn-success">Submit</button>
+               </td>
+           </tr>
+
+       </table>
+       <span>
+        {{message}}
+    </span>
+     </form>
+    </div>
+
+</div>
+
+  

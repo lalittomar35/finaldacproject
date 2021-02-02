@@ -1,0 +1,34 @@
+
+  
+<br><br><br><br>
+ 
+<!-- <div class="bg-img"> -->
+  <h1>Manage Subjects</h1>
+
+  <div class="content" >        
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Subject Id</th>
+          <th>Subject Name</th>
+          <!-- <th>No of Questions</th> -->
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sub of subjects">
+          <td scope="row">{{sub.subId}}</td>
+          <td>{{sub.subName}}</td>
+        <!-- after completion -->
+          <!-- <td>1</td> -->
+          <td><button style = "margin-right: 20px;margin-left: 10px;" class="btn btn-info" routerLink="/admin/modules/managesubjects/manageque/{{sub.subId}}">Manage Question</button>
+          <button class="btn btn-danger" (click)="deleteSub(sub.subId)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+<!-- </div> -->
+
+  
+ 
